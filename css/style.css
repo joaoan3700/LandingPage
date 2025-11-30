@@ -561,7 +561,7 @@ body {
 
   /* garante parágrafo e botão centralizados */
   .recapagem-mobile p,
-  .recapagem-mobile .btn {
+  .recapagem-mobile .btn, .recapagem-mobile a {
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center;
