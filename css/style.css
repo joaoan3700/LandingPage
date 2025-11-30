@@ -216,6 +216,16 @@ body {
   max-width: 400px;
 }
 
+.industry2 {
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+.mobil {
+  margin-top: 30px;
+  max-width: 200px;
+}
+
 .shine-img {
   position: relative;
   overflow: hidden;
@@ -471,6 +481,11 @@ body {
     margin-top: 10px;
   }
 
+  .industry2 {
+    margin-top: 5px;
+    max-width: 150px;
+  }
+
   .service-item {
     flex-direction: column !important;
     text-align: center;
@@ -565,6 +580,18 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center;
+  }
+
+  .recap-btn {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .serv-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70% !important;  /* ajuste visual ideal, pode mudar para 60% ou 80% */
   }
 }
 
@@ -666,4 +693,20 @@ body {
     font-size: 12px;
     letter-spacing: 2px;
     transform: rotate(180deg);
+}
+
+.serv-container {
+  background-color: #cfcece;
+}
+
+.petronas {
+  max-width: 150px;
+}
+
+.mobil {
+  max-width: 150px;
+}
+
+.cofap {
+  max-width: 150px;
 }
