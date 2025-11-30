@@ -1,0 +1,669 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.top-marquee {
+  width: 100%;
+  background: #ea3131;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  position: relative;
+  margin-top: -10px;
+}
+
+.top-marquee2 {
+  width: 100%;
+  background: #9c9b9b;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  position: relative;
+  margin-top: -10px;
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 40px;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee-item {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.peb {
+  max-width: 73px;
+  margin-right: -200px;
+}
+
+.whatsapp-navbar {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.phone-navbar {
+  color: white;
+  font-size: 30px;
+}
+
+.categorie-container {
+  background: linear-gradient(135deg, #f52229, #760b0f);
+}
+
+.categorie-btn {
+  background: rgba(101, 24, 24, 0.642);
+  border-radius: 10px;
+}
+
+.color-ea3131 {
+  color: #ea3131;
+}
+
+.bg-cinza {
+  background-color: #f7f7f7;
+}
+
+.bg-branco {
+  background-color: #fff;
+}
+
+.tire-img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.categorie {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.categorie:hover {
+  transform: scale(1.03);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 78px;
+  height: 78px;
+  bottom: 27px;
+  right: 27px;
+  background-color: #25d366;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.5s infinite;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  color: #fff;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+
+  70% {
+    transform: scale(1.12);
+    box-shadow: 0 0 20px 10px rgba(32, 209, 97, 0.594);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 101, 0.145);
+  }
+}
+
+.video-overlay {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(227, 24, 24);
+  font-size: 1.4rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.video-recap {
+  border: 1px solid #ea3131;
+}
+
+.flotating {
+  font-size: 45px;
+}
+
+.payment {
+  align-items: center;
+}
+
+.visa {
+  max-height: 12px;
+}
+
+.master {
+  max-height: 22px;
+}
+
+.elo {
+  max-height: 13px;
+}
+
+.amex {
+  max-height: 16px;
+}
+
+.diners {
+  max-height: 20px;
+}
+
+.pix {
+  max-height: 19px;
+}
+
+.boleto {
+  max-height: 45px;
+}
+
+.btn-orc:hover {
+  color: white;
+  background-color: #13af4c;
+  transition: background-color 0.8s ease;
+}
+
+.industry {
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.shine-img {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Feixe de luz 
+.categorie-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shine 4s infinite;
+    border-radius: 10px;
+} */
+
+/* A animação */
+@keyframes shine {
+    0% {
+        left: -120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-img {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 30px;
+  z-index: 999;
+}
+
+.right {
+  margin-left: -5px;
+}
+
+.left {
+  margin-right: -5px;
+}
+
+.retangulo1 {
+  width: 450px;
+  height: 12px;
+  background: #ea3131;
+  border-radius: 1px 0 0 1px;
+}
+
+.retangulo2 {
+  width: 450px;
+  height: 12px;
+  background: #ea3131;
+  border-radius: 0 1px 1px 0;
+}
+
+.retangulo-menor {
+  width: 12px;
+  height: 12px;
+  background: #ea3131;
+  border-radius: 1px;
+}
+
+.bandag {
+  max-width: 100px;
+}
+
+.promo-modal {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  padding: 18px 22px;
+  border: 1px solid #ea3131;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.352);
+  z-index: 99999;
+  width: 195px;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: zoomIn 0.4s forwards;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #555;
+}
+
+.saida {
+  max-width: 250px;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+#exitModal .modal-content {
+  border-radius: 20px;
+}
+
+.modal {
+  z-index: 99999;
+}
+
+.zoom-in {
+  animation: zoomIn 0.25s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fiat {
+  max-width: 100px;
+}
+
+.iveco {
+  max-width: 200px;
+}
+
+/* CSS para Selo Inline */
+.secure-badge {
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  padding: .45rem .7rem;
+  border-radius: .5rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: .88rem;
+  line-height: 1;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+}
+
+/* ícone */
+.secure-badge .sb-icon { 
+  display:inline-flex; 
+  color: #9be7a6; /* tom verde suave */
+}
+
+/* texto */
+.secure-badge .sb-text { 
+  display:inline-block; 
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+/* cnpj menor */
+.secure-badge .sb-cnpj { 
+  font-weight: 600;
+  color: #dbeef0;
+  font-size: .85rem;
+}
+
+/* pequenos ajustes responsivos */
+@media (max-width: 480px){
+  .secure-badge { font-size: .82rem; padding: .35rem .5rem; }
+}
+
+
+@media (max-width: 768px) {
+  .icons {
+    margin-top: -15px;
+  }
+
+  .peb {
+    max-width: 73px;
+    margin-left: -20px;
+    margin-right: -0 !important;
+  }
+
+  .whatsapp-text,
+  .phone-text {
+    display: none;
+  }
+
+  .suv-button,
+  .truck-button,
+  .agro-button {
+    height: 40px;
+  }
+
+  .truck-button {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .suv,
+  .agro {
+    font-size: 15.5px;
+  }
+
+  .truck {
+    font-size: 16px;
+  }
+
+  .industry {
+    max-width: 250px;
+    margin-top: 10px;
+  }
+
+  .service-item {
+    flex-direction: column !important;
+    text-align: center;
+    align-items: center !important;
+  }
+
+  .service-item i {
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+  }
+
+  .badge-img {
+    width: 30px;
+    top: -1px;
+    right: -1px;
+  }
+
+  .retangulo1 {
+    width: 150px;
+    height: 12px;
+    background: #ea3131;
+    border-radius: 1px 0 0 1px;
+  }
+
+  .retangulo2 {
+    width: 150px;
+    height: 12px;
+    background: #ea3131;
+    border-radius: 0 1px 1px 0;
+  }
+
+  .cars {
+    text-align: left !important;
+  }
+
+  .background-img {
+    display: none;
+  }
+
+  .background-img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1 !important;
+    border-radius: 0.5rem;
+  }
+
+  /* -- ajustes específicos para mobile (bootstrap md breakpoint) -- */
+@media (max-width: 767px) {
+
+  /* pega só o flex que contém H2 + img (evita mexer em outros d-flex) */
+  .recapagem-mobile > .d-flex.align-items-center {
+    justify-content: center !important; /* centraliza horizontalmente */
+    align-items: center !important;
+    flex-wrap: wrap !important;         /* permite quebra para alinhar melhor */
+    gap: .4rem !important;              /* espaço consistente entre texto e imagem */
+    width: 100% !important;
+  }
+
+  /* garante titulo sem margens que “empurram” o layout */
+  .recapagem-mobile h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    font-size: 1.4rem; /* ajusta visual do H2 no mobile, altere se quiser */
+    line-height: 1.1;
+  }
+
+  /* limita o tamanho da logo bandag para não "arrastar" o layout */
+  .recapagem-mobile img.bandag {
+    display: inline-block !important;
+    max-width: 90px !important;   /* <== ajuste este valor conforme sua logo */
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  /* centraliza o bloco "Assista o vídeo" (outro d-flex interno) */
+  .recapagem-mobile .color-ea3131 {
+    justify-content: center !important;
+    text-align: center;
+    gap: .35rem;
+    flex-wrap: wrap;
+  }
+
+  /* garante parágrafo e botão centralizados */
+  .recapagem-mobile p,
+  .recapagem-mobile .btn {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+}
+
+}
+
+@media (max-width: 400px) {
+  .icons {
+    margin-top: -15px;
+  }
+
+  .whatsapp-text,
+  .phone-text {
+    display: none;
+  }
+
+  .suv-button,
+  .truck-button,
+  .agro-button {
+    height: 40px;
+  }
+
+  .truck-button {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .suv,
+  .agro {
+    font-size: 13.5px;
+    margin-top: 5px !important;
+  }
+
+  .truck {
+    font-size: 13px;
+    margin-top: 5px !important;
+  }
+}
+
+.btn-topo {
+    position: fixed;
+    left: 0;
+    bottom: 200px;
+    z-index: 9999;
+    background: #e51e25; /* vermelho padrão caso queira combinar com o site */
+    color: #fff;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 0 8px 8px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(-120%); /* escondido inicialmente */
+    transition: transform .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    /* display: none; */
+}
+
+/* seta */
+.btn-topo:hover {
+    background: #c1181f;
+}
+
+/* texto na vertical */
+.btn-topo span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.btn-phone {
+    position: fixed;
+    left: 0;
+    bottom: 260px;
+    z-index: 9999;
+    background: #dcdcdc;
+    color: black;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 0 8px 8px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(-120%);
+    transition: transform .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.btn-phone:hover {
+    background: #b6b5b5;
+}
+
+.btn-phone span {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transform: rotate(180deg);
+}
