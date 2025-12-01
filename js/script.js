@@ -84,3 +84,77 @@ window.addEventListener("scroll", () => {
         btnPhone.style.transform = "translateX(-120%)";
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".cc-track");
+    const items = document.querySelectorAll(".cc-item");
+    const nextBtn = document.querySelector(".cc-next");
+    const prevBtn = document.querySelector(".cc-prev");
+
+    let visible = window.innerWidth <= 576 ? 2 : 3;
+    let index = 0;
+    let autoplay;
+
+    /* ====== RESPONSIVIDADE ====== */
+    const updateVisible = () => {
+        visible = window.innerWidth <= 576 ? 2 : 3;
+        moveCarousel();
+    };
+
+    window.addEventListener("resize", updateVisible);
+
+    const moveCarousel = () => {
+        const itemWidth = items[0].offsetWidth + 20;
+        track.style.transform = `translateX(${-index * itemWidth}px)`;
+    };
+
+    nextBtn.addEventListener("click", () => {
+        if (index < items.length - visible) index++;
+        moveCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (index > 0) index--;
+        moveCarousel();
+    });
+
+    /* ====== AUTOPLAY ====== */
+    const startAutoplay = () => {
+        autoplay = setInterval(() => {
+            if (index < items.length - visible) index++;
+            else index = 0;
+            moveCarousel();
+        }, 5000);
+    };
+
+    const stopAutoplay = () => clearInterval(autoplay);
+
+    startAutoplay();
+
+
+    /* ====== MODAL ====== */
+    const modal = document.getElementById("ccModal");
+    const modalImg = document.getElementById("ccModalImg");
+    const closeBtn = document.querySelector(".cc-close");
+
+    items.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+            stopAutoplay();
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        startAutoplay();
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            startAutoplay();
+        }
+    });
+});
