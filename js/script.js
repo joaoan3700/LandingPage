@@ -58,23 +58,6 @@ marquee.addEventListener('mouseleave', () => {
     marquee.style.animationPlayState = 'running';
 });
 
-const btnTopo = document.getElementById("btn-topo");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 3700) {
-        btnTopo.style.transform = "translateX(0)";
-    } else {
-        btnTopo.style.transform = "translateX(-120%)";
-    }
-});
-
-btnTopo.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
 const btnPhone = document.getElementById("btn-phone");
 
 window.addEventListener("scroll", () => {

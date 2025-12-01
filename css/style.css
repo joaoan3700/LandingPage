@@ -18,7 +18,7 @@ body {
 
 .top-marquee2 {
   width: 100%;
-  background: #9c9b9b;
+  background: #ffffff;
   overflow: hidden;
   white-space: nowrap;
   padding: 8px 0;
@@ -80,9 +80,14 @@ body {
   font-size: 30px;
 }
 
-.categorie-container {
+.firstpart {
   background: linear-gradient(135deg, #f52229, #760b0f);
 }
+
+.categorie-container {
+  background: transparent;
+}
+
 
 .categorie-btn {
   background: rgba(101, 24, 24, 0.642);
@@ -257,12 +262,13 @@ body {
 
 /* A animação */
 @keyframes shine {
-    0% {
-        left: -120%;
-    }
-    100% {
-        left: 120%;
-    }
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 120%;
+  }
 }
 
 .img-wrapper {
@@ -343,7 +349,7 @@ body {
 }
 
 .saida {
-  max-width: 250px;
+  max-width: 500px;
 }
 
 @keyframes zoomIn {
@@ -407,40 +413,44 @@ body {
   display: inline-flex;
   gap: .6rem;
   align-items: center;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: #fff;
   padding: .45rem .7rem;
   border-radius: .5rem;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   font-size: .88rem;
   line-height: 1;
-  border: 1px solid rgba(255,255,255,0.04);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 /* ícone */
-.secure-badge .sb-icon { 
-  display:inline-flex; 
-  color: #9be7a6; /* tom verde suave */
+.secure-badge .sb-icon {
+  display: inline-flex;
+  color: #9be7a6;
+  /* tom verde suave */
 }
 
 /* texto */
-.secure-badge .sb-text { 
-  display:inline-block; 
+.secure-badge .sb-text {
+  display: inline-block;
   color: #f5f5f5;
   font-weight: 500;
 }
 
 /* cnpj menor */
-.secure-badge .sb-cnpj { 
+.secure-badge .sb-cnpj {
   font-weight: 600;
   color: #dbeef0;
   font-size: .85rem;
 }
 
 /* pequenos ajustes responsivos */
-@media (max-width: 480px){
-  .secure-badge { font-size: .82rem; padding: .35rem .5rem; }
+@media (max-width: 480px) {
+  .secure-badge {
+    font-size: .82rem;
+    padding: .35rem .5rem;
+  }
 }
 
 
@@ -547,66 +557,76 @@ body {
     border-radius: 0.5rem;
   }
 
+  .saida {
+    max-width: 400px;
+  }  
+}
+
   /* -- ajustes específicos para mobile (bootstrap md breakpoint) -- */
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
 
-  /* pega só o flex que contém H2 + img (evita mexer em outros d-flex) */
-  .recapagem-mobile > .d-flex.align-items-center {
-    justify-content: center !important; /* centraliza horizontalmente */
-    align-items: center !important;
-    flex-wrap: wrap !important;         /* permite quebra para alinhar melhor */
-    gap: .4rem !important;              /* espaço consistente entre texto e imagem */
-    width: 100% !important;
+    /* pega só o flex que contém H2 + img (evita mexer em outros d-flex) */
+    .recapagem-mobile>.d-flex.align-items-center {
+      justify-content: center !important;
+      /* centraliza horizontalmente */
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      /* permite quebra para alinhar melhor */
+      gap: .4rem !important;
+      /* espaço consistente entre texto e imagem */
+      width: 100% !important;
+    }
+
+    /* garante titulo sem margens que “empurram” o layout */
+    .recapagem-mobile h2 {
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center;
+      font-size: 1.4rem;
+      /* ajusta visual do H2 no mobile, altere se quiser */
+      line-height: 1.1;
+    }
+
+    /* limita o tamanho da logo bandag para não "arrastar" o layout */
+    .recapagem-mobile img.bandag {
+      display: inline-block !important;
+      max-width: 90px !important;
+      /* <== ajuste este valor conforme sua logo */
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
+    }
+
+    /* centraliza o bloco "Assista o vídeo" (outro d-flex interno) */
+    .recapagem-mobile .color-ea3131 {
+      justify-content: center !important;
+      text-align: center;
+      gap: .35rem;
+      flex-wrap: wrap;
+    }
+
+    /* garante parágrafo e botão centralizados */
+    .recapagem-mobile p,
+    .recapagem-mobile .btn,
+    .recapagem-mobile a {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center;
+    }
+
+    .recap-btn {
+      justify-content: center !important;
+      text-align: center;
+    }
+
+    .serv-container img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70% !important;
+      /* ajuste visual ideal, pode mudar para 60% ou 80% */
+    }
   }
-
-  /* garante titulo sem margens que “empurram” o layout */
-  .recapagem-mobile h2 {
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center;
-    font-size: 1.4rem; /* ajusta visual do H2 no mobile, altere se quiser */
-    line-height: 1.1;
-  }
-
-  /* limita o tamanho da logo bandag para não "arrastar" o layout */
-  .recapagem-mobile img.bandag {
-    display: inline-block !important;
-    max-width: 90px !important;   /* <== ajuste este valor conforme sua logo */
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-  }
-
-  /* centraliza o bloco "Assista o vídeo" (outro d-flex interno) */
-  .recapagem-mobile .color-ea3131 {
-    justify-content: center !important;
-    text-align: center;
-    gap: .35rem;
-    flex-wrap: wrap;
-  }
-
-  /* garante parágrafo e botão centralizados */
-  .recapagem-mobile p,
-  .recapagem-mobile .btn, .recapagem-mobile a {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center;
-  }
-
-  .recap-btn {
-    justify-content: center !important;
-    text-align: center;
-  }
-
-  .serv-container img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70% !important;  /* ajuste visual ideal, pode mudar para 60% ou 80% */
-  }
-}
-
-}
 
 @media (max-width: 400px) {
   .icons {
@@ -643,67 +663,69 @@ body {
 }
 
 .btn-topo {
-    position: fixed;
-    left: 0;
-    bottom: 200px;
-    z-index: 9999;
-    background: #e51e25; /* vermelho padrão caso queira combinar com o site */
-    color: #fff;
-    border: none;
-    padding: 10px 8px;
-    border-radius: 0 8px 8px 0;
-    font-weight: bold;
-    cursor: pointer;
-    transform: translateX(-120%); /* escondido inicialmente */
-    transition: transform .3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    /* display: none; */
+  position: fixed;
+  left: 0;
+  bottom: 200px;
+  z-index: 9999;
+  background: #e51e25;
+  /* vermelho padrão caso queira combinar com o site */
+  color: #fff;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 0 8px 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateX(-120%);
+  /* escondido inicialmente */
+  transition: transform .3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  /* display: none; */
 }
 
 /* seta */
 .btn-topo:hover {
-    background: #c1181f;
+  background: #c1181f;
 }
 
 /* texto na vertical */
 .btn-topo span {
-    font-size: 12px;
-    letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 .btn-phone {
-    position: fixed;
-    left: 0;
-    bottom: 260px;
-    z-index: 9999;
-    background: #dcdcdc;
-    color: black;
-    border: none;
-    padding: 10px 8px;
-    border-radius: 0 8px 8px 0;
-    font-weight: bold;
-    cursor: pointer;
-    transform: translateX(-120%);
-    transition: transform .3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
+  position: fixed;
+  left: 0;
+  bottom: 260px;
+  z-index: 9999;
+  background: #dcdcdc;
+  color: black;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 0 8px 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateX(-120%);
+  transition: transform .3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }
 
 .btn-phone:hover {
-    background: #b6b5b5;
+  background: #b6b5b5;
 }
 
 .btn-phone span {
-    writing-mode: vertical-rl;
-    text-orientation: sideways-right;
-    font-size: 12px;
-    letter-spacing: 2px;
-    transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transform: rotate(180deg);
 }
 
 .serv-container {
@@ -746,7 +768,8 @@ body {
 }
 
 .cc-item {
-  min-width: calc((100% - 40px) / 3); /* desktop: 3 por tela */
+  min-width: calc((100% - 40px) / 3);
+  /* desktop: 3 por tela */
   border-radius: 12px;
   object-fit: cover;
 }
@@ -754,7 +777,8 @@ body {
 /* ----- MOBILE (2 itens por vez) ----- */
 @media (max-width: 576px) {
   .cc-item {
-      min-width: calc((100% - 20px) / 2); /* mobile: 2 itens */
+    min-width: calc((100% - 20px) / 2);
+    /* mobile: 2 itens */
   }
 }
 
@@ -764,7 +788,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: 5;
-  background:transparent;
+  background: transparent;
   color: black;
   border: none;
   font-size: 26px;
@@ -779,8 +803,13 @@ body {
   background: rgba(163, 163, 163, 0.7);
 }
 
-.cc-prev { left: 3px; }
-.cc-next { right: 3px; }
+.cc-prev {
+  left: 3px;
+}
+
+.cc-next {
+  right: 3px;
+}
 
 /* ------- MODAL ------- */
 .cc-modal {
@@ -791,7 +820,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   justify-content: center;
   align-items: center;
 }
@@ -811,7 +840,8 @@ body {
   max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain; /* garante que NUNCA corte */
+  object-fit: contain;
+  /* garante que NUNCA corte */
   border-radius: 12px;
 }
 
@@ -824,7 +854,7 @@ body {
   color: white;
   cursor: pointer;
   font-weight: bold;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 
@@ -843,7 +873,7 @@ body {
   cursor: pointer;
   font-weight: 600;
   z-index: 10;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   transition: background .2s;
 }
 
