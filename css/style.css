@@ -566,6 +566,20 @@ body {
     border-radius: 0 1px 1px 0;
   }
 
+  .retangulo1b {
+    width: 150px;
+    height: 12px;
+    background: #fff;
+    border-radius: 1px 0 0 1px;
+  }
+  
+  .retangulo2b {
+    width: 150px;
+    height: 12px;
+    background: #fff;
+    border-radius: 0 1px 1px 0;
+  }
+
   .cars {
     text-align: left !important;
   }
