@@ -87,6 +87,10 @@ window.addEventListener("scroll", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    /* =======================
+       VARIÁVEIS DO CARROSSEL
+    ======================== */
     const track = document.querySelector(".cc-track");
     const items = document.querySelectorAll(".cc-item");
     const nextBtn = document.querySelector(".cc-next");
@@ -96,7 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
     let autoplay;
 
-    /* ====== RESPONSIVIDADE ====== */
+    /* =======================
+          RESPONSIVIDADE
+    ======================== */
     const updateVisible = () => {
         visible = window.innerWidth <= 576 ? 2 : 3;
         moveCarousel();
@@ -105,10 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", updateVisible);
 
     const moveCarousel = () => {
-        const itemWidth = items[0].offsetWidth + 20;
+        const itemWidth = items[0].offsetWidth + 20; 
         track.style.transform = `translateX(${-index * itemWidth}px)`;
     };
 
+    /* =======================
+         CONTROLES MANUAIS
+    ======================== */
     nextBtn.addEventListener("click", () => {
         if (index < items.length - visible) index++;
         moveCarousel();
@@ -119,42 +128,67 @@ document.addEventListener("DOMContentLoaded", () => {
         moveCarousel();
     });
 
-    /* ====== AUTOPLAY ====== */
+    /* =======================
+             AUTOPLAY
+    ======================== */
     const startAutoplay = () => {
         autoplay = setInterval(() => {
             if (index < items.length - visible) index++;
             else index = 0;
             moveCarousel();
-        }, 5000);
+        }, 10000);
     };
 
     const stopAutoplay = () => clearInterval(autoplay);
 
     startAutoplay();
 
-
-    /* ====== MODAL ====== */
+    /* =======================
+               MODAL
+    ======================== */
     const modal = document.getElementById("ccModal");
     const modalImg = document.getElementById("ccModalImg");
     const closeBtn = document.querySelector(".cc-close");
+
+    let selectedImageSrc = ""; // armazena a imagem clicada
 
     items.forEach(img => {
         img.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImg.src = img.src;
+            selectedImageSrc = img.src;  // guarda o src da imagem aberta
             stopAutoplay();
         });
     });
 
+    /* Fechar modal no X */
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
         startAutoplay();
     });
 
+    /* Fechar modal ao clicar fora */
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
             startAutoplay();
         }
     });
+
+    /* =======================
+        BOTÃO "TENHO INTERESSE"
+    ======================== */
+    const interestBtn = document.querySelector(".cc-btn-interest");
+
+    interestBtn.addEventListener("click", () => {
+        const message =
+            "Olá, vim pelo site e gostaria de mais informações.%0AImagem:%0A" +
+            encodeURIComponent(selectedImageSrc);
+
+        const url =
+            "https://wa.me/558000002146?text=" + message;
+
+        window.open(url, "_blank");
+    });
+
 });
