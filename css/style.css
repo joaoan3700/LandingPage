@@ -179,10 +179,6 @@ body {
   pointer-events: none;
 }
 
-.video-recap {
-  border: 1px solid #ea3131;
-}
-
 .flotating {
   font-size: 45px;
 }
@@ -406,10 +402,16 @@ body {
 
 .fiat {
   max-width: 100px;
+  text-decoration: none;
 }
 
 .iveco {
   max-width: 200px;
+  text-decoration: none;
+}
+
+.t-none {
+  text-decoration: none;
 }
 
 /* CSS para Selo Inline */
