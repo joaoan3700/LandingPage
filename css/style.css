@@ -6,6 +6,10 @@ body {
   font-family: 'Urbanist', sans-serif;
 }
 
+.img-ofertas {
+  max-width: 200px;
+}
+
 .top-marquee {
   width: 100%;
   background: #ea3131;
