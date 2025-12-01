@@ -64,6 +64,11 @@ body {
   margin-right: -200px;
 }
 
+.ofertas {
+  max-width: 100px;
+  margin-right: -300px;
+}
+
 .whatsapp-navbar {
   color: white;
   font-size: 35px;
@@ -446,6 +451,12 @@ body {
 
   .peb {
     max-width: 73px;
+    margin-left: -20px;
+    margin-right: -0 !important;
+  }
+
+  .ofertas {
+    max-width: 80px;
     margin-left: -20px;
     margin-right: -0 !important;
   }
