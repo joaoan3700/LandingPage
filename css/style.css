@@ -218,7 +218,7 @@ body {
 
 .industry2 {
   margin-top: 10px;
-  max-width: 400px;
+  max-width: 200px;
 }
 
 .mobil {
@@ -709,4 +709,8 @@ body {
 
 .cofap {
   max-width: 150px;
+}
+
+.varejo {
+  max-width: 1000px;
 }
