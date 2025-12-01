@@ -182,11 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     interestBtn.addEventListener("click", () => {
         const message =
-            "Olá, vim pelo site e gostaria de mais informações.%0AImagem:%0A" +
+            "Olá, vim pelo site e gostaria de mais informações.%0A%0ALink da Imagem:%0A" +
             encodeURIComponent(selectedImageSrc);
 
         const url =
-            "https://wa.me/558000002146?text=" + message;
+            "https://wa.me/5561985483875?text=" + message;
 
         window.open(url, "_blank");
     });
